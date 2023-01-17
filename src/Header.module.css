@@ -1,0 +1,20 @@
+.header {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.text {
+    flex-grow: 1;
+    text-align: center;
+    color: var(--app-blue);
+    line-height: 0;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.logo {
+    height: 6rem;
+    will-change: filter;
+}
