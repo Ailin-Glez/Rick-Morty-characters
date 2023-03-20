@@ -1,0 +1,37 @@
+.table {
+    border-spacing: 0 2px;
+    border-radius: 20px;
+    border: none;
+    color: #ececec;
+    padding: 20px 20px 40px 20px;
+    width: 70vw;
+    text-align: left;
+    background-color: var(--app-gray);
+    font-size: 0.9rem;
+}
+
+.myRow {
+  padding-left: 20px;
+}
+
+th {
+  color: var(--app-blue);
+  border-bottom: 2px solid var(--app-blue);
+  margin-bottom: 10px;
+}
+
+td:first-child,
+th:first-child {
+  border-radius: 5px 0 0 5px;
+
+}
+
+td:last-child,
+th:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.tableContainer {
+  display: flex;
+}
+

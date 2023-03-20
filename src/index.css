@@ -1,0 +1,46 @@
+:root {
+  --app-blue: #00dfdd;
+  --app-gray: #677378;
+  --app-dark-blue: #0a222d;
+}
+
+body {
+  font-family: 'Montserrat';
+  padding: 0 2rem;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  /* min-width: 320px; */
+  background-color: var(--app-dark-blue);
+}
+
+.noResults {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8rem;
+  color: #ececec;
+}
+
+.noResults > img {
+  width: 8rem;
+}
+
+.odd {
+  background-color: var(--app-dark-blue);
+}
+
+button {
+  font-size: 1.2rem;
+  border: none;
+  background-color: var(--app-blue);
+  margin-top: 20px;
+  color: var(--app-dark-blue);
+}
+
+button:hover {
+  cursor: pointer;
+}
