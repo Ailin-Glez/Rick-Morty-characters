@@ -32,15 +32,18 @@ function App() {
   }, [])
 
   const searchCharacter = (char) => {
-    setAppData(`${BASE_URL}/?name=${char}`)
-    setCriteria(char)
+    // To avoid sending request with the same previous data
+    if (char !== criteria) {
+      setAppData(`${BASE_URL}/?name=${char}`)
+      setCriteria(char)
+    }
   }
 
   return (
     <div className='app'>
       <Header />
       <SearchBar onSearchCharacter={searchCharacter} />
-      {!data ? <NoResults criteria={criteria} /> : !isLoading ? <Table data={data} setAppData={setAppData} /> : 'Loading...'}
+      {!data ? <NoResults criteria={criteria} /> : !isLoading ? <Table data={data} /> : 'Loading...'}
       <Pages pages={pages} characterName={criteria} setAppData={setAppData} />
     </div>
   )

@@ -1,18 +1,14 @@
 :root {
   --app-blue: #00dfdd;
-  --app-gray: #828a8d;
+  --app-gray: #c4c4c480;
   --app-dark-blue: #0a222d;
 }
 
 body {
   font-family: 'Montserrat';
-  padding: 0 2rem;
-}
-
-body {
+  margin: 1rem 4rem;
   display: flex;
   align-items: center;
-  /* min-width: 320px; */
   background-color: var(--app-dark-blue);
 }
 
@@ -27,10 +23,6 @@ body {
 
 .noResults > img {
   width: 8rem;
-}
-
-.odd {
-  background-color: var(--app-dark-blue);
 }
 
 button {

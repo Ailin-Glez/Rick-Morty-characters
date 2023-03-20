@@ -1,0 +1,49 @@
+.table-container {
+  display: flex;
+}
+
+table {
+  border-spacing: 0 2px;
+  border-radius: 20px;
+  color: white;
+  padding: 1rem 1.2rem 1.5rem;
+  min-width: 60%;
+  text-align: left;
+  background-color: var(--app-gray);
+  font-size: 0.8rem;
+}
+
+th {
+  max-width: 16rem;
+}
+
+.odd {
+  background-color: var(--app-dark-blue);
+}
+
+.row-eye-btn:hover {
+  cursor: pointer;
+  color: var(--app-dark-blue);
+}
+
+tbody tr:hover {
+  cursor: pointer;
+  background-color: var(--app-blue);
+  color: var(--app-dark-blue);
+}
+
+th {
+  color: var(--app-blue);
+  border-bottom: 2px solid var(--app-blue);
+  margin-bottom: 10px;
+}
+
+td:first-child,
+th:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+td:last-child,
+th:last-child {
+  border-radius: 0 5px 5px 0;
+}
