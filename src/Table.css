@@ -9,7 +9,8 @@ table {
   padding: 1rem 1.2rem 1.5rem;
   min-width: 60%;
   text-align: left;
-  background-color: var(--app-gray);
+  background: linear-gradient(10deg, var(--app-dark-blue), var(--app-gray));
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
   font-size: 0.8rem;
 }
 
