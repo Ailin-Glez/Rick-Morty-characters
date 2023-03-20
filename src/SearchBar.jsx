@@ -1,26 +1,32 @@
-import { useState } from 'react'
-import { BsSearch } from 'react-icons/bs'
-import styles from './SearchBar.module.css'
+import { useRef } from 'react'
+import {BsSearch} from 'react-icons/bs'
 
-const SearchBar = ({ searchCharacter }) => {
-  const [inputValue, setInputValue] = useState('')
+import './SearchBar.css'
+
+/**
+ * SearchBar component
+ * Uses ref to handle the input field
+ * @prop {function} onSearchCharacter - Function received from the App parent component to handle the character search. 
+ * The function receives the character value entered
+ */
+const SearchBar = ({ onSearchCharacter }) => {
+  const inputRef = useRef()
 
   const handleSearch = (e) => {
     e.preventDefault()
-    searchCharacter(inputValue)
+    onSearchCharacter(inputRef.current.value)
   }
 
   const clearSearch = () => {
-    setInputValue('')
-    searchCharacter('')
+    inputRef.current.value = ''
+    onSearchCharacter('')
   }
 
   return (
-    <form className={styles.searchContainer} onSubmit={handleSearch}>
-      <BsSearch className={styles.searchIcon} size='18' />
-      <input className={styles.searchbox} type='text' value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder='Enter character name' />
-      <button type='button' className={inputValue ? styles.clearBtn : styles.hidden} onClick={clearSearch}>X</button>
-      <button type='submit' disabled={!inputValue}>Search</button>
+    <form onSubmit={handleSearch}>
+      <BsSearch className='search-icon' size='14' />
+      <input className='search-box' type='text' ref={inputRef} placeholder='Enter character name' />
+      <button className={inputRef.current?.value ? 'search-clear-btn' : 'search-hidden-btn'} onClick={clearSearch}>X</button>
     </form>
   )
 }

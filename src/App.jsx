@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import Header from './Header'
 import NoResults from './NoResults'
 import Pages from './Pages'
-import SearchBar from './Searchbar'
+import SearchBar from './SearchBar'
 import Table from './Table'
 import { BASE_URL, navigateToPage } from './utils'
 
@@ -39,7 +39,7 @@ function App() {
   return (
     <div className='app'>
       <Header />
-      <SearchBar searchCharacter={searchCharacter} />
+      <SearchBar onSearchCharacter={searchCharacter} />
       {!data ? <NoResults criteria={criteria} /> : !isLoading ? <Table data={data} setAppData={setAppData} /> : 'Loading...'}
       <Pages pages={pages} characterName={criteria} setAppData={setAppData} />
     </div>
