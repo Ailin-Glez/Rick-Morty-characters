@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import { BASE_URL } from './hooks/useRickAndMorty'
+import { useEffect, useState } from 'react'
+import {BASE_URL} from './hooks/useRickAndMorty'
+
 import './Pages.css'
 
 // Local Function  to return an array with the pages numbers to display (example: [4, 5, 6])
@@ -22,11 +23,11 @@ const getNumbers = (num, totalPages) => {
  * Uses state to handle the current page selected
  * @prop {object} pages - Object with the pages information (next, prev, pages)
  * @prop {string} characterName - Character name to be included in the URL to search
- * @prop {function} onPageNavigation - Function received from the App parent component to handle the App data 
+ * @prop {function} onPageNavigation - Function received from the App parent component to handle the App data
  * when navigating to an specific page
  */
 
-function Pages ({ pages, characterName, onPageNavigation }) {
+function Pages({ pages, characterName, onPageNavigation }) {
   const [currentPage, setCurrentPage] = useState(1)
   const { pages: totalPages, prev, next } = pages
   const pageNumbers = getNumbers(currentPage, totalPages)
@@ -37,6 +38,11 @@ function Pages ({ pages, characterName, onPageNavigation }) {
       onPageNavigation(`${BASE_URL}?page=${page}&name=${characterName}`)
     }
   }
+
+  useEffect(() => { 
+    // Reset the current page to be 1 after a new character name search
+    setCurrentPage(1)
+  }, [characterName])
 
   return (
     <footer className='pages-container'>
