@@ -6,7 +6,6 @@ import {
 } from './hooks/useRickAndMorty'
 
 import Header from './Header'
-import NoResults from './NoResults'
 import Pages from './Pages'
 import SearchBar from './SearchBar'
 import Table from './Table'
@@ -30,8 +29,13 @@ function App() {
     <div className='app-container'>
       <Header />
       <SearchBar onSearchCharacter={searchCharacter} />
-      {!data && <NoResults criteria={criteria} />}
-      {data.length === 0 ? (
+      {!data && (
+        <div className='no-results'>
+          <img src='./no-results.png' alt='no result image' />
+          <p>No results found for "{criteria}"</p>
+        </div>
+      )}
+      {data?.length === 0 ? (
         <h4 className='welcome-message'>{message}</h4>
       ) : (
         <>
