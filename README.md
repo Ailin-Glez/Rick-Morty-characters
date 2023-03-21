@@ -14,7 +14,7 @@ and show some detailed info for each one of them
 
 > When the user clicks on the eye icon, a character detail must be shown.
 
-#### Check the live demo [here]()
+#### Check the live demo [here](https://rick-morty-characters-challenge.netlify.app/)
 
 #### Created with:
 
