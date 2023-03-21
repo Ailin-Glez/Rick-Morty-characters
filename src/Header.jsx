@@ -1,9 +1,12 @@
 import './Header.css'
 
-// Header is a stateless component that displays the header title and the Rick and Morty logo image with a link to a new tab
-// with the Rick and Morty API documentation
+/**
+ * Header component
+ * stateless component that displays the header title and the Rick and Morty logo image with a link to a new tab
+ * with the Rick and Morty API documentation
+ */
 
-const Header = () => {
+function Header() {
   return (
     <div className='header-container'>
       <p className='header-text'>Rick and Morty characters</p>

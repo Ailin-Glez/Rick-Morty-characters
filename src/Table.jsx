@@ -10,7 +10,8 @@ import './Table.css'
  * When clicking on the eye button, the Card component is rendered
  * @prop {object} data - Object with the character data (id, name, status, species, etc)
  */
-const Table = ({ data }) => {
+
+function Table({ data }) {
   const [isCardOpened, setIsCardOpened] = useState(false)
   const [cardDetails, setCardDetails] = useState([])
 

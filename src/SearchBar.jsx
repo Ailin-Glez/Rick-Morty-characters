@@ -9,7 +9,8 @@ import './SearchBar.css'
  * @prop {function} onSearchCharacter - Function received from the App parent component to handle the character search.
  * The function receives the character value entered
  */
-const SearchBar = ({ onSearchCharacter }) => {
+
+function SearchBar({ onSearchCharacter }) {
   const [searchCriteria, setSearchCriteria] = useState('')
 
   const handleSubmit = (e) => {

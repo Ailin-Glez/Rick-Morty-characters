@@ -6,6 +6,7 @@ import './Card.css'
  * @prop {object} details - Object with the character data (name, status, species, gender, location, type)
  * @prop {function} onCardClose - Function to be executed in the parent (Table) to close the card
  */
+
 function Card({ details, onCardClose }) {
   const labels = ['Name', 'Species', 'Gender', 'Status', 'Location', 'Type']
 
