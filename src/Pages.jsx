@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import styles from './Pages.module.css'
+import './Pages.css'
 import { BASE_URL } from './utils'
 
 const Pages = ({ pages, characterName, setAppData }) => {
@@ -32,22 +32,22 @@ const Pages = ({ pages, characterName, setAppData }) => {
   const pageNumbers = getNumbers(currentPage)
   const numbers = pageNumbers.map((page, i) => {
     return (
-      <button key={i} className={`${styles.pagesBtn} ${page === currentPage && styles.currentPage}`} onClick={() => handleNavigateToPage(page)}>
+      <button key={i} className={`$pagesBtn} ${page === currentPage &&currentPage}`} onClick={() => handleNavigateToPage(page)}>
         {page}
       </button>
     )
   })
 
   return (
-    <div className={styles.pagesContainer}>
-      <button className={styles.pagesBtn} disabled={pages.prev === null} onClick={() => handleNavigateToPage(1)}>
+    <div className="pagesContainer">
+      <button className="pagesBtn" disabled={pages.prev === null} onClick={() => handleNavigateToPage(1)}>
         {'<<'}
       </button>
       {numbers}
-      <button className={styles.pagesBtn} disabled={pages.next === null} onClick={() => handleNavigateToPage(numberOfPages)}>
+      <button className="pagesBtn" disabled={pages.next === null} onClick={() => handleNavigateToPage(numberOfPages)}>
         {'>>'}
       </button>
-      <span className={styles.pages}>
+      <span className="pages">
         {numberOfPages} {numberOfPages === 1 ? 'page' : 'pages'}
       </span>
     </div>
