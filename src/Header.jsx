@@ -8,12 +8,12 @@ import './Header.css'
 
 function Header() {
   return (
-    <div className='header-container'>
+    <header className='header-container'>
       <p className='header-text'>Rick and Morty characters</p>
       <a href='https://rickandmortyapi.com/documentation/' target='_blank'>
         <img className='header-logo' src='./logo-header.png' alt='logo' />
       </a>
-    </div>
+    </header>
   )
 }
 

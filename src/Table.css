@@ -1,5 +1,6 @@
 .table-container {
   display: flex;
+  align-items: flex-start;
 }
 
 table {
