@@ -1,10 +1,10 @@
-.pagesContainer {
+.pages-container {
   display: flex;
   font-size: 0.8rem;
   color: white;
 }
 
-.pagesBtn {
+.pages-btn {
   color: var(--app-blue);
   font-size: 0.7rem;
   border: none;
@@ -12,22 +12,22 @@
   background-color: transparent;
 }
 
-.pagesBtn:hover:not(.currentPage) {
+.pages-btn:hover:not(.pages-current-page) {
   cursor: pointer;
   background-color: var(--app-gray);
   color: white;
 }
 
-.pagesBtn:disabled {
+.pages-btn:disabled {
   visibility: hidden;
 }
 
-.pages {
+.pages-number {
   margin: 1.2rem 0 0 1rem;
   font-weight: 400;
 }
 
-.currentPage {
+.pages-current-page {
   background-color: var(--app-blue);
   color: var(--app-dark-blue);
 }
