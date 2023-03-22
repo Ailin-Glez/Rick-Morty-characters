@@ -1,6 +1,7 @@
 .table-container {
   display: flex;
   align-items: flex-start;
+  min-height: 29rem;
 }
 
 table {
